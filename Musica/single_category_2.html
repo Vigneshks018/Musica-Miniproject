@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Third Page</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+  <header data-aos="fade-up" data-aos-duration="1000">
+    <nav id="header-nav" class="navbar navbar-default">
+      <!--Class in bootstrap predefined-->
+      <div class="container">
+        <!--container changes width based on browser, entire content sits inside this container-->
+        <!--header nav is above div  container because we want navbar to stretch till end of the browser but content inside the container wont stretch till end-->
+        <div class="navbar-header">
+          <!--some padding and floating inside navbar header class (a bootstarp class),if we want to use navbar brand inside this use navbar header-->
+          <a href="index.html" class="pull-left visible-md visible-lg">
+            <!--pullleft to align logo float left and visible md and lg is to make logo visible only in large and medium device not mobile-->
+            <div id="logo-img"></div>
+            <!--image will be added as background image so in styling we will add-->
+          </a>
+          <div class="navbar-brand">
+            <a href="index.html">
+              <h1>MUSICA</h1>
+            </a>
+            <!--Heading must be clickable-->
+            <!--Heading is wrapped inside navbar brandand floated left and logo is not floated left so it comes one down the other-->
+            <!--Soltion is to float the logo left so go to logo class and put "pull-left" a bootstrap class-->
+          </div>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav"
+            aria-expanded="false">
+            <!--navbar-toggle controls positoning whole button(check in bootstrap.css)basically positions relative and float right with padding margin top and some main features navbar toggle is visible only when min width is less than 768px else display=none 
+            collapse is javascipt module it will pll up and pull down the menu bar with three buttons....will learn more(plugins)-->
+            <!--data target is attribute has #collapsable-nav(user defined id name) used to target next menu bar id named collapsable-nav  -->
+            <span class="sr-only">Toggle Naavigation</span>
+            <!--sr-only-these are for screen readers not shown i the output-->
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <!--three icon bar to be put here-->
+          </button>
+        </div>
+        <div id="collapsable-nav" class="collapse navbar-collapse">
+          <!--collapsable nav is targetted from the button class above,collapse and navbar collapse mst be put according to bootstrap
+      create an unordered list with id nav-list and class nav and navbar-nav-"Im going to be a component of navigation  ie converts unordered list into nicely done menu in navigation bar " and navbar-right is to float our nav right-->
+          <ul id="nav-list" class="nav navbar-nav navbar-right">
+            <li class="active">
+              <a href="menu-categories.html">
+                <span class="glyphicon glyphicon-music"></span><br class="hidden-xs">Classes
+              </a>
+              <!--icon font="glyphicon glyphicon-cutlery(vector image)", and br is used to put break between icon and menu and hidden xs will hide the break if size is extra small-->
+            </li>
+            <li>
+              <a href="form.html">
+                <span class="glyphicon glyphicon-question-sign"></span><br class="hidden-xs">Contact us</a>
+            </li>
+            <li>
+              <a href="about.html">
+                <span class="glyphicon glyphicon-certificate"></span><br class="hidden-xs">About</a>
+            </li>
+            <li id="phone" class="hidden-xs">
+              <!--hidden in super small-->
+              <a href="tel:9483363169">
+                <!--Triggers call-->
+                <span>080-2099088</span></a>
+              <div>*Call us</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div id="call-btn" class="visible-xs">
+    <a class="btn" href="tel:9483363169">
+      <span class="glyphicon glyphicon-earphone"></span>080-2099088
+    </a>
+  </div>
+  <div id="xs-deliver" class="text-center visible-xs">*Call us</div>
+  <div id="main-content" class="container" data-aos="fade-left" data-aos-duration="1000">
+    <h2 id="menu-categories-title" class="text-center" style="color: gold;">Guitar Class</h2>
+    <div class="text-center">Tap on the class to find more</div>
+    <section class="row">
+      <div class="menu-item-tile col-md-6">
+        <!--col-md-6 willl take half the screen when medium-->
+        <div class="row">
+          <!--another row used because we need to subdivide the things like picture takes 5 and desc takes 7-->
+          <div class="col-sm-5">
+            <!--inside row we will subdivide again as 5 and 7-->
+            <div class="menu-item-photo">
+              <!--class will be  relative -->
+              <div>G1</div>
+              <!--div inside this class menu-item-photo is made absolute that is moved based on the class...we will move bottom right-->
+              <a href="Half_intro_9.html"> <img class="img-responsive" width="250" height="150" src="img_new/Jumbo_01_1_250x150.jpg"
+                  alt="Item"></a>
+              <!--This is image section-->
+
+            </div>
+            <div class="menu-item-price">Rs.500<span>/</span><span>month</span></div>
+            <div  style="margin: 20px;" class="menu-item-price">Tutor name:<span></span><span>John Pinto</span></div>
+            <!--this is price section right below photo-->
+          </div>
+          <div class="menu-item-desciption col-sm-7">
+            <!--second-->
+            <h3 class="menu-item-title" style="color: gold;">Harvest Arts Academy</h3>
+
+            <p class="menu-item-details">
+              The ability to play a musical instrument is everyone's desire. And so being passionate about music, we
+              started the Harvest Arts Academy to help individuals nurture talent and develop musical skills.
+
+              <br> Currently we are offering Acoustic Guitar and Keyboard Lessons
+            </p>
+          </div>
+        </div>
+        <hr class="visible-xs">
+      </div>
+
+      <div class="menu-item-tile col-md-6">
+        <!--col-md-6 willl take half the screen when medium-->
+        <div class="row">
+          <!--another row used because we need to subdivide the things like picture takes 5 and desc takes 7-->
+          <div class="col-sm-5">
+            <!--inside row we will subdivide again as 5 and 7-->
+            <div class="menu-item-photo">
+              <!--class will be  relative -->
+              <div>G2</div>
+              <!--div inside this class menu-item-photo is made absolute that is moved based on the class...we will move bottom right-->
+              <a href="Half_intro_3.html"> <img class="img-responsive" width="250" height="150" src="img_new/Jumbo_01_1_250x150.jpg" alt="Item">
+              </a><!--This is image section-->
+
+            </div>
+            <div class="menu-item-price">Rs.1600<span>/</span><span>month</span></div>
+            <div  style="margin: 20px;" class="menu-item-price">Tutor name:<span></span><span>Shreejith </span></div>
+            <!--this is price section right below photo-->
+          </div>
+          <div class="menu-item-desciption col-sm-7">
+            <!--second-->
+            <h3 class="menu-item-title" style="color: gold;">Taaqademy</h3>
+            <p class="menu-item-details">Taaqademy is a music school. We teach music – guitar, bass, drums, keyboards
+              and vocals across the widest variety of genres and styles – but what we’re truly after is inspiration.
+              Lighting that spark behind the eyes. Injecting a sure shot of excitement.
+              Delivering a creative experience that is addictive, uplifting - and just plain old great fun.</p>
+          </div>
+        </div>
+        <hr class="visible-xs">
+      </div>
+      <div class="clearfix visible-md-block visible-lg-block"></div>
+      <!--good practice to add thios after every second div or box inorder to maintain good wesite-->
+      <div class="menu-item-tile col-md-6">
+        <!--col-md-6 willl take half the screen when medium-->
+        <div class="row">
+          <!--another row used because we need to subdivide the things like picture takes 5 and desc takes 7-->
+          <div class="col-sm-5">
+            <!--inside row we will subdivide again as 5 and 7-->
+            <div class="menu-item-photo">
+              <!--class will be  relative -->
+              <div>G3</div>
+              <!--div inside this class menu-item-photo is made absolute that is moved based on the class...we will move bottom right-->
+             <a href="Half_intro_6.html"> <img class="img-responsive" width="250" height="150" src="img_new/Jumbo_01_1_250x150.jpg" alt="Item">
+              <!--This is image section-->
+            </a>
+            </div>
+            <div class="menu-item-price">Rs.500<span>/</span>month<span></span></div>
+            <div  style="margin: 10px; "class="menu-item-price">Tutor name:<span></span><span>Williams</span></div>
+            <!--this is price section right below photo-->
+          </div>
+          <div class="menu-item-desciption col-sm-7">
+            <!--second-->
+            <h3 class="menu-item-title" style="color: gold;">Uttarang Music's & Dance Academy</h3>
+            <p class="menu-item-details">Uttarang Music's & Dance Academy has various dance forms including Bollywood, ,
+              Western Dance , Free style , Bharatanatyam and health fitness like
+              Zumba .We Are Also Specialized in Music Classes For Keyboard , Piano , Guitar , Percussion instruments
+              etc.</p>
+          </div>
+        </div>
+        <hr class="visible-xs">
+      </div>
+      <div class="menu-item-tile col-md-6">
+        <!--col-md-6 willl take half the screen when medium-->
+        <div class="row">
+          <!--another row used because we need to subdivide the things like picture takes 5 and desc takes 7-->
+          <div class="col-sm-5">
+            <!--inside row we will subdivide again as 5 and 7-->
+            <div class="menu-item-photo">
+              <!--class will be  relative -->
+              <div>G4</div>
+              <!--div inside this class menu-item-photo is made absolute that is moved based on the class...we will move bottom right-->
+             <a href="Half_intro_5.html"> <img class="img-responsive" width="250" height="150" src="img_new/Jumbo_01_1_250x150.jpg" alt="Item">
+              <!--This is image section-->
+            </a>
+            </div>
+            <div class="menu-item-price">900<span>/</span><span>month</span></div>
+            <div style="margin: 20px;"class="menu-item-price">Tutor name:<span></span><span>Raman</span></div>
+            <!--this is price section right below photo-->
+          </div>
+          <div class="menu-item-desciption col-sm-7">
+            <!--second-->
+            <h3 class="menu-item-title" style="color: gold;">Sri Venkat Academy of Music</h3>
+            <p class="menu-item-details">Sri Venkat Academy of Music is established in the year 2004 to impart quality
+              education
+              in the filed of Carnatic Music and other percussion arts..</p>
+          </div>
+        </div>
+        <hr class="visible-xs">
+      </div>
+      <div class="clearfix visible-md-block visible-lg-block"></div>
+
+
+    </section>
+
+
+  </div>
+  <footer class="panel-footer" data-aos="fade-up" data-aos-duration="1000">
+    <!--defaualt background color and some properties-->
+    <div class="container">
+      <div class="row">
+        <section id="hours" class="col-sm-4">
+          <span> For more details</span><br>
+          Contact us<br>
+
+
+          <div id="call-btn">
+            <a class="btn my-btn" href="tel:9483363169">
+              <span class="glyphicon glyphicon-earphone">
+              </span>
+              080-2099088
+            </a>
+          </div>
+
+
+
+
+          <hr class="visible-xs">
+        </section>
+        <section id="address" class="col-sm-4">
+          <span class="text-center">Desc:</span><br>
+          Musica.com is a most useful website for all the music aspirants who wants find best music classes around the
+          city.
+          It is a one stop destination for all the upcoming musician to find the right tutors and right academy
+          of thier choice.
+          <p class="text-center">BANGALORE - MANGALORE - UDUPI
+          </p>
+          <hr class="visible-xs">
+        </section>
+        <section id="testimonials" class="col-sm-4">
+          <p>
+            “Music is the moonlight in the gloomy night of life."</p>
+          <p>“If Music is a Place — then Jazz is the City, Folk is the Wilderness, Rock is the Road, Classical is a Temple.”
+          </p>
+        </section>
+      </div>
+      <div class="text-center">&copy; Copyright Mycreation 2020</div>
+    </div>
+  </footer>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+          AOS.init();
+  </script>
+</body>
+
+</html>

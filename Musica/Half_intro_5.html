@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Musica</title>
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="js/newscript.js"></script> <script src="js/script.js"></script>-->
+  <!--<link href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@500&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet">-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <!--<script src="js/newscript.js"></script> -->
+  <script src="js/script.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">    
+  <style>
+    * {
+      box-sizing: border-box
+    }
+
+    body {
+      font-family: Verdana, sans-serif;
+      margin: 0
+    }
+
+    .mySlides {
+      display: none
+    }
+
+    img {
+      vertical-align: middle;
+    }
+
+    /* Slideshow container */
+    .slideshow--container {
+      max-width: 1000px;
+      position: relative;
+      margin: auto;
+    }
+
+    /* Next & previous buttons */
+    .previou,
+    .nextu {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+
+    /* Position the "next button" to the right */
+    .nextu {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    /* On hover, add a black background color with a little bit see-through */
+    .previou:hover,
+    .nextu:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    /* Caption text */
+    .text11 {
+      color: #f2f2f2;
+      font-size: 15px;
+      padding: 8px 12px;
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
+      text-align: center;
+    }
+
+    /* Number text (1/3 etc) */
+    .numbertext11 {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+
+    /* The dots/bullets/indicators */
+    .dot1 {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+
+    .active,
+    .dot:hover {
+      background-color: #717171;
+    }
+
+    /* Fading animation */
+    .fade1 {
+      -webkit-animation-name: fade;
+      -webkit-animation-duration: 1.5s;
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+
+    @-webkit-keyframes fade {
+      from {
+        opacity: .4
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    @keyframes fade {
+      from {
+        opacity: .4
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    /* On smaller screens, decrease text size */
+    @media only screen and (max-width: 300px) {
+
+      .previou,
+      .nextu,
+      .text11 {
+        font-size: 11px
+      }
+    }
+
+    #menu-tile {
+      background: url("img_new/86-2_360x250.jpg") no-repeat;
+      background-position: center;
+      /*image center*/
+    }
+
+    #specials-tile {
+      background: url("img_new/music_tile_1_360x250.jpg") no-repeat;
+      background-position: center;
+    }
+  </style>
+
+
+
+</head>
+
+<body>
+  <header data-aos="fade-up" data-aos-duration="1000">
+    <nav id="header-nav" class="navbar navbar-default">
+      <!--Class in bootstrap predefined-->
+      <div class="container">
+        <!--container changes width based on browser, entire content sits inside this container-->
+        <!--header nav is above div  container because we want navbar to stretch till end of the browser but content inside the container wont stretch till end-->
+        <div class="navbar-header">
+          <!--some padding and floating inside navbar header class (a bootstarp class),if we want to use navbar brand inside this use navbar header-->
+          <a href="index.html" class="pull-left visible-md visible-lg ">
+            <!--pullleft to align logo float left and visible md and lg is to make logo visible only in large and medium device not mobile-->
+            <div id="logo-img"></div>
+            <!--image will be added as background image so in styling we will add-->
+          </a>
+          <div class="navbar-brand">
+            <a href="index.html">
+              <h1>MUSICA</h1>
+            </a>
+            <!--Heading must be clickable-->
+            <!-- <p><-inside a paragraph we will write the image and span -->
+            <!--Image a small image to be created-->
+            <!--After doing this everything comes down one after the another since block elemnts so style it-->
+            <!--</p>Heading is wrapped inside navbar brandand floated left and logo is not floated left so it comes one down the other-->
+            <!--Soltion is to float the logo left so go to logo class and put "pull-left" a bootstrap class-->
+          </div>
+          <button id="navbarToggle" type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+            data-target="#collapsable-nav" aria-expanded="false">
+            <!--navbar-toggle controls positoning whole button(check in bootstrap.css)basically positions relative and float right with padding margin top and some main features navbar toggle is visible only when min width is less than 768px else display=none 
+            collapse is javascipt module it will pll up and pull down the menu bar with three buttons....will learn more(plugins)-->
+            <!--data target is attribute has #collapsable-nav(user defined id name) used to target next menu bar id named collapsable-nav  -->
+            <span class="sr-only">Toggle Naavigation</span>
+            <!--sr-only-these are for screen readers not shown i the output-->
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <!--<span class="icon-bar"></span><!--three icon bar to be put here-->
+          </button>
+        </div>
+        <div id="collapsable-nav" class="collapse navbar-collapse">
+          <!--collapsable nav is targetted from the button class above,collapse and navbar collapse mst be put according to bootstrap
+      create an unordered list with id nav-list and class nav and navbar-nav-"Im going to be a component of navigation  ie converts unordered list into nicely done menu in navigation bar " and navbar-right is to float our nav right-->
+          <ul id="nav-list" class="nav navbar-nav navbar-right">
+            <li>
+              <a href="menu-categories.html">
+                <span class="glyphicon glyphicon-music"></span><br class="hidden-xs">CLASSES
+              </a>
+              <!--icon font="glyphicon glyphicon-cutlery(vector image)", and br is used to put break between icon and menu and hidden xs will hide the break if size is extra small-->
+            </li>
+            <li>
+              <a href="form.html">
+                <span class="
+             glyphicon glyphicon-question-sign"></span><br class="hidden-xs">CONTACT US</a>
+            </li>
+            <li>
+              <a href="about.html">
+                <span class="glyphicon glyphicon-certificate"></span><br class="hidden-xs">ABOUT</a>
+            </li>
+            <li id="phone" class="hidden-xs">
+              <!--hidden in super small-->
+              <a href="tel:9483363169">
+                <!--Triggers call-->
+                <span class="glyphicon glyphicon-earphone"></span> <span>080-2996790</span></a>
+              <div>*Call us</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div id="call-btn" class="visible-xs">
+    <a class="btn" href="tel:9483363169">
+      <span class="glyphicon glyphicon-earphone">
+      </span>
+      080-2099088
+    </a>
+  </div>
+
+  <div id="xs-deliver" class="text-center visible-xs">*Call us</div>
+  <section>
+    <h1 class="newh1 text-center" style="color: gold; margin-bottom: 30px;;" data-aos="fade-up" data-aos-duration="1000">Sri Venkat Academy of music</h1>
+  </section>
+
+  <div id="main-content" class="container">
+    <!-- create a photo showing window-->
+    <!--  <div class="jumbotron"> 
+       <img src="img_new/back2_1200x675.jpg" alt="Pic of Hotel"
+       class="img-responsive visible-xs"><!--img-responsive=bootstrap that changes width of the image proportionally and visible only if screen is extra small-->
+    <!--</div></div>-->
+
+
+
+    <div class="slideshow--container" data-aos="fade-down" data-aos-duration="1000">
+
+      <div class="mySlides fade1">
+        <div class="numbertext11">1 / 3</div>
+        <img src="img_new/MusicofIndia.png" style="width:100%">
+        <div class="text11">Gallery</div>
+      </div>
+
+      <div class="mySlides fade1">
+        <div class="numbertext11">2 / 3</div>
+        <img src="img_new/Keyboard_back.jpg" style="width:100%">
+        <div class="text11">Gallery</div>
+      </div>
+
+      <div class="mySlides fade1">
+        <div class="numbertext11">3 / 3</div>
+        <img src="img_new/Jumbo_01_2_1200x675.jpg" style="width:100%">
+        <div class="text11">Gallery</div>
+      </div>
+
+      <a class="previou" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="nextu" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+      <span class="dot1" onclick="currentSlide(1)"></span>
+      <span class="dot1" onclick="currentSlide(2)"></span>
+      <span class="dot1" onclick="currentSlide(3)"></span>
+    </div>
+
+
+
+    <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot1");
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+    </script>
+
+    <section>
+      <h2 data-aos="fade-right" data-aos-duration="1000" style="color: gold;">Overview</h2><br>
+      <p data-aos="fade-left" data-aos-duration="1000">Sri Venkat Academy of Music is established in the year 2004 to impart quality education in the filed of Carnatic Music and other percussion arts.
+        We have Appointed Well Experienced & Fully qualified Trained Professionals as teaching staffs in Music & Dance field teaching to the needy with very reasonable Fees.</p>
+      <br>
+      <p data-aos="fade-right" data-aos-duration="1000" style="color: gold;">Class Location</p>
+      <p data-aos="fade-left" data-aos-duration="1000">
+        At the Institute
+        <br>
+        Online mode
+
+      </p>
+      <br>
+      <p data-aos="fade-right" data-aos-duration="1000" style="color: gold;">Type of classes</p>
+<p data-aos="fade-left" data-aos-duration="1000">
+      Individual classes, Group classes</p>
+      <p data-aos="fade-right" data-aos-duration="1000" style="color: gold;">Category</p>
+
+      1.Keyboard<br>
+      2.Vocals<br>
+      3.Guitar<br>
+      4.Tabla<br>
+      5.Harmonium<br>
+      </p>
+      <p data-aos="fade-left" data-aos-duration="1000" style="color: gold;">Address</p>
+      <p data-aos="fade-right" data-aos-duration="1000">
+
+        o.1965/1, South End D cross, 26th Main<br>
+
+Jayanagar 9th Block, Bangalore<br>
+
+Jayanagar 9th Block, Bangalore, India - 560069<br>
+
+Landmark: Near to Ragigudda Temple<br>
+        Check down in the map.</p>
+        <p data-aos="fade-left" data-aos-duration="1000" style="color: gold;">Review</p>
+        <form action = "" method = "get">
+        
+          <br>
+          <p data-aos="fade-right" data-aos-duration="1000" id="mynamepara"> Name:&nbsp; <input type="text" id="myname" name="myname"></p>
+          <textarea data-aos="fade-left" data-aos-duration="1000" id="comment" rows = "5" cols = "60" name = "description" style="color: black;">
+             Enter Review here...
+          </textarea><br>
+          <input type = "button" value = "submit" style="color: black;" onclick="mynewfunc()" />
+        </form>
+        <p style= "color: gold;" id="youropiname"></p>
+        <p id="youropi"></p>
+        <p style="color: gold;">Review by Varsha</p>
+        <p style="font-style: italic;">"I know Harish as an acquaintance: we must have met only a handful of times, and luckily...".</p>
+        <p style="color: gold;">Review by Chandra</p>
+        <p style="font-style: italic;">"Very good teacher and knowledgeable in Hindustani classical music (Violin, Vocal,..."..."</p>
+      </section>
+
+
+
+
+
+    <div id="home-tiles" class="row" data-aos="fade-down" data-aos-duration="1000">
+      <!--When the browser is medium we want three tile layup-4,4,4,butv when when small screen size 6,6,12 is mentioned two on top and one on bottom-->
+      <div class="col-md-4 col-sm-6 col-xs-12">
+        <a href="tel:9483363169">
+          <div id="menu-tile" id="contactusnow"><span>Contact us</span></div>
+        </a>
+        <!--one thing to observe is the div and span are seperated and div is covering span because div will give a perfect square and menu(span) displayed inside the div-->
+      </div>
+      <div class="col-md-4 col-sm-6 col-xs-12">
+        <a href="menu-categories.html">
+          <div id="specials-tile" class="contactusnow1"><span>Classes</span></div>
+        </a>
+      </div>
+      <div class="col-md-4 col-sm-12 col-xs-12">
+        <a href="https://goo.gl/maps/rN1rMygwVaxqTDLi7" target="_blank">
+          <div id="map-tile">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3890.1535608681047!2d77.66126871342816!3d12.833351771372339!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1606297989666!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;"
+             allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            <span>map</span>
+          </div>
+        </a>
+      </div>
+    </div>
+    <!--End of #hometiles-->
+  </div>
+  <!--End of #main-content-->
+
+  <footer class="panel-footer" data-aos="fade-up" data-aos-duration="1000">
+    <!--defaualt background color and some properties-->
+    <div class="container">
+      <div class="row">
+        <section id="hours" class="col-sm-4">
+          <span> For more details</span><br>
+          Contact us<br>
+
+
+          <div id="call-btn">
+            <a class="btn my-btn" href="tel:9483363169">
+              <span class="glyphicon glyphicon-earphone">
+              </span>
+              080-2099088
+            </a>
+          </div>
+
+
+
+
+          <hr class="visible-xs">
+        </section>
+        <section id="address" class="col-sm-4">
+          <span class="text-center">Desc:</span><br>
+          Musica.com is a most useful website for all the music aspirants who wants find best music classes around the
+          city.
+          It is a one stop destination for all the upcoming musician to find the right tutors and right academy
+          of thier choice.
+          <p class="text-center">BANGALORE - MANGALORE - UDUPI
+          </p>
+          <hr class="visible-xs">
+        </section>
+        <section id="testimonials" class="col-sm-4">
+          <p>
+            “Music is the moonlight in the gloomy night of life."</p>
+          <p>“If Music is a Place — then Jazz is the City, Folk is the Wilderness, Rock is the Road, Classical is a Temple.”
+          </p>
+        </section>
+      </div>
+      <div class="text-center">&copy; Copyright Mycreation 2020</div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+          AOS.init();
+  </script>
+</body>
+
+</html>

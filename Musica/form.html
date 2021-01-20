@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Musica</title>
+   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="js/newscript.js"></script> <script src="js/script.js"></script>-->
+    <!--<link href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@500&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet">-->
+     
+    <style>
+        input[type=text], select {
+            color: gold;
+          width: 100%;
+          padding: 12px 20px;
+          margin: 8px 0;
+          display: inline-block;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+        }
+        
+        input[type=submit] {
+            color: gold;
+          width: 100%;
+          background-color: maroon;
+          color: white;
+          padding: 14px 20px;
+          margin: 8px 0;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+        
+        input[type=submit]:hover {
+          background-color:gold;
+        }
+        
+        #form-php{
+          border-radius: 5px;
+          background-color: #f2f2f2;
+          padding: 20px;
+        }
+        .formclass{
+            margin-bottom: 30px;
+        }
+        </style>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/styles.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<!--<script src="js/newscript.js"></script> <script src="js/script.js"></script>-->
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@500&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet">
+  
+  </head>
+<body>
+  <header>
+    <nav id ="header-nav" class="navbar navbar-default"><!--Class in bootstrap predefined-->
+      <div class="container"><!--container changes width based on browser, entire content sits inside this container-->
+     <!--header nav is above div  container because we want navbar to stretch till end of the browser but content inside the container wont stretch till end-->
+      <div class="navbar-header"><!--some padding and floating inside navbar header class (a bootstarp class),if we want to use navbar brand inside this use navbar header-->
+        <a href="index.html" class="pull-left visible-md visible-lg "><!--pullleft to align logo float left and visible md and lg is to make logo visible only in large and medium device not mobile-->
+          <div id="logo-img"></div><!--image will be added as background image so in styling we will add-->
+        </a>
+        <div class ="navbar-brand">
+          <a href="index.html"><h1>MUSICA</h1></a>
+          <!--Heading must be clickable-->
+         <!-- <p><-inside a paragraph we will write the image and span -->
+           <!--Image a small image to be created-->
+            <!--After doing this everything comes down one after the another since block elemnts so style it-->
+          <!--</p>Heading is wrapped inside navbar brandand floated left and logo is not floated left so it comes one down the other-->
+           <!--Soltion is to float the logo left so go to logo class and put "pull-left" a bootstrap class-->
+        </div>
+          <button id="navbarToggle" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
+            <!--navbar-toggle controls positoning whole button(check in bootstrap.css)basically positions relative and float right with padding margin top and some main features navbar toggle is visible only when min width is less than 768px else display=none 
+            collapse is javascipt module it will pll up and pull down the menu bar with three buttons....will learn more(plugins)-->
+            <!--data target is attribute has #collapsable-nav(user defined id name) used to target next menu bar id named collapsable-nav  -->
+            <span class="sr-only">Toggle Naavigation</span><!--sr-only-these are for screen readers not shown i the output-->
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <!--<span class="icon-bar"></span><!--three icon bar to be put here-->
+          </button>
+      </div>
+      <div id="collapsable-nav" class="collapse navbar-collapse"><!--collapsable nav is targetted from the button class above,collapse and navbar collapse mst be put according to bootstrap
+      create an unordered list with id nav-list and class nav and navbar-nav-"Im going to be a component of navigation  ie converts unordered list into nicely done menu in navigation bar " and navbar-right is to float our nav right-->
+        <ul id="nav-list" class="nav navbar-nav navbar-right">
+          <li>
+            <a href="menu-categories.html">
+              <span class="glyphicon glyphicon-music"></span><br class="hidden-xs">CLASSES
+            </a><!--icon font="glyphicon glyphicon-cutlery(vector image)", and br is used to put break between icon and menu and hidden xs will hide the break if size is extra small-->
+          </li>
+          <li>
+           <a href="form.html">
+             <span class="
+             glyphicon glyphicon-question-sign"></span><br class="hidden-xs">CONTACT US</a>   
+          </li>
+          <li>
+              <a href="about.html">
+                <span class="glyphicon glyphicon-certificate"></span><br class="hidden-xs">ABOUT</a>   
+             </li>
+             <li id ="phone" class="hidden-xs"><!--hidden in super small-->
+               <a href="tel:9483363169"><!--Triggers call-->
+                <span class="glyphicon glyphicon-earphone"></span> <span>080-2996790</span></a><div>*Call us</div>
+             </li>
+        </ul>
+      </div>
+    </div>
+    </nav>
+  </header>
+   <div id="call-btn" class="visible-xs">
+     <a class="btn" href="tel:9483363169">
+      <span class="glyphicon glyphicon-earphone">
+     </span>
+        080-2099088
+     </a>
+   </div>
+
+   <div id="xs-deliver" class="text-center visible-xs">*Call us</div>
+
+    <div id="main-content" class="container">
+   <!-- create a photo showing window-->
+  <!--  <div class="jumbotron"> 
+       <img src="img_new/back2_1200x675.jpg" alt="Pic of Hotel"
+       class="img-responsive visible-xs"><!--img-responsive=bootstrap that changes width of the image proportionally and visible only if screen is extra small-->
+     <!--</div></div>-->
+     
+
+
+
+
+
+<section>
+  <h1 class="text-center" style="color: gold; margin-bottom: 20px;">Find Best Music Schools in Bangalore,Mangalore and Udupi</h1>
+  <p style="margin-bottom: 20px" class="text-center";>Musica.com helps you to find best music school according to your requirements, tap on the image and check in the details
+    <br>
+    If interested you can contact them or you can visit the Academy as the location is shared to you
+  </p>
+  <h4 class="text-center"  margin-bottom: 20px;">If you are tutor then register your school on our website</h4>
+</section>
+
+
+<section class="formclass">
+<h3 class="text-center"  style="color: gold;">Register your School</h3>
+
+
+<div id="form-php">
+    <form action="Miniphp.php" method="GET">
+      <label for="fname" style="color: maroon;">First Name</label>
+      <input type="text" id="fname" name="firstname" placeholder="Your name..">
+  
+      <label for="lname " style="color:maroon">Last Name</label>
+      <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+      <label for="schoolname " style="color:maroon">Name of Academy</label>
+      <input type="text" id="schoolname" name="schoolname" placeholder="Your school name..">
+      <label for="phno" style="color:maroon">Contact no</label>
+      <input type="text" id="contactno" name="contactno" placeholder="Your Ph Number..">
+      <label for="email" style="color:maroon">Email</label>
+      <input type="text" id="email" name="email" placeholder="Your email-id..">
+  
+      <label for="country" style="color: maroon;">Place</label>
+      <select id="country" name="place" style="color: maroon;">
+        <option value="Kundapura">Kundapura</option>
+        <option value="Mangalore">Mangalore</option>
+        <option value="Bangalore">Bangalore</option>
+      </select>
+    
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+
+
+</section>
+  
+
+
+
+
+      
+      <div id="home-tiles" class="row"><!--When the browser is medium we want three tile layup-4,4,4,butv when when small screen size 6,6,12 is mentioned two on top and one on bottom-->
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <a href="about.html"><div id="menu-tile"><span>ABOUT</span></div></a><!--one thing to observe is the div and span are seperated and div is covering span because div will give a perfect square and menu(span) displayed inside the div-->
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <a href="menu-categories.html"><div id="specials-tile"><span>CLASSES</span></div></a>
+        </div>
+        <div class="col-md-4 col-sm-12 col-xs-12">
+         <a href="https://goo.gl/maps/cR3gVgDracW5iGQc7" target="_blank">
+           <div id="map-tile">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31020.48697192278!2d74.67591746290927!3d13.623610637537979!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbc8e067b158c71%3A0x3b3eb31736debdcb!2sKundapura%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1606403620518!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" 
+            allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+             <span>Our Office</span>
+           </div>
+         </a>
+        </div>
+      </div><!--End of #hometiles-->
+    </div><!--End of #main-content-->
+    
+    <footer class="panel-footer"><!--defaualt background color and some properties-->
+      <div class="container">
+        <div class="row">
+          <section id="hours" class="col-sm-4">
+            <span> To register your class in our website</span><br>
+            Contact us(Register as Tutor)<br>
+            
+
+            <div id="call-btn">
+              <a class="btn my-btn" href="tel:9483363169">
+               <span class="glyphicon glyphicon-earphone">
+              </span>
+                Call us
+              </a>
+            </div>
+
+
+
+
+            <hr class="visible-xs">
+          </section>
+          <section id="address" class="col-sm-4">
+            <span class="text-center">Desc:</span><br>
+             Musica.com is a most useful website for all the music aspirants who wants find best music classes around the city. 
+             It is a one stop destination for all the upcoming musician to find the right tutors and right academy
+             of thier choice.
+            <p class="text-center">BANGALORE - MANGALORE - UDUPI
+            </p>
+            <hr class="visible-xs">
+          </section>
+          <section id="testimonials" class="col-sm-4">
+            <p>
+              “Music is the moonlight in the gloomy night of life."</p>
+            <p>“If Music is a Place — then Jazz is the City, Folk is the Wilderness, Rock is the Road, Classical is a Temple.”
+            </p>
+            </section>
+        </div>
+        <div class="text-center">&copy; Copyright Mycreation 2020</div>
+      </div>
+        </footer>
+</body>
+</html>
